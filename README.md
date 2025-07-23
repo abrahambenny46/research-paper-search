@@ -1,8 +1,6 @@
-# 🔍 Research Paper Search Engine
+## 🔍 Research Paper Search Engine
 
 A full-stack web application that allows users to search academic papers using natural language queries. It fetches relevant research papers from **arXiv**, uses **semantic search** to rank them, and generates **AI-powered summaries** of each paper’s key findings — all in real time and optimized to run on CPU.
-
-
 
 ---
 
@@ -14,7 +12,6 @@ A full-stack web application that allows users to search academic papers using n
 -  Generates **short AI summaries** for each paper
 -  Optimized for **CPU-only environments**
 -  Built with **Flask**
-
 
 ---
 
@@ -43,13 +40,39 @@ research_paper_search/
 └── templates/
 └── index.html # Frontend UI
 
-
 ---
 
-## 📦 Installation
+# Installation
 
-1. **Clone the repository**
+# Clone the repository
 
 ```bash
 git clone https://github.com/abrahambenny46/research-paper-search.git
 cd research-paper-search
+```
+# Install required packages
+
+pip install -r requirements.txt
+
+# Run the Application
+
+python app.py
+
+# Then open your browser and visit:
+http://localhost:5000
+
+
+# How It Works
+1.User enters a query (e.g., "transformers in computer vision").
+2.The app uses the arXiv API to fetch recent related papers.
+3.Each abstract is embedded into a vector using MiniLM (a small Transformer model).
+4.The user’s query is embedded and compared using FAISS to find the top matching papers.
+5.The top 5 papers are summarized using the DistilBART model.
+6.The results are displayed beautifully in the browser.
+
+# Contributing
+Contributions are welcome!
+Feel free to:
+Fork the repo
+Create a feature branch
+Submit a pull request
