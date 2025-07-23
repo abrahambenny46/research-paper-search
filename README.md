@@ -73,6 +73,6 @@ http://localhost:5000
 # Contributing
 Contributions are welcome!
 Feel free to:
-Fork the repo
-Create a feature branch
+Fork the repo,
+Create a feature branch,
 Submit a pull request
